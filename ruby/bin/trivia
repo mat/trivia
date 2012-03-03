@@ -5,6 +5,8 @@ require 'ugly_trivia/game'
 
 not_a_winner = false
 
+Kernel.srand(ENV.fetch('TRIVIA_SEED', 42).to_i)
+
 game = UglyTrivia::Game.new
 
 game.add 'Chet'
